@@ -1,4 +1,10 @@
 .audios_wrap {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    app-soundboard-item {
+        margin: 15px 5px;
+    }
 }

@@ -1,9 +1,13 @@
-<div class="item_wrapper">
-  <div class="control_wrap">
-      <img src="/assets/img/play-button.svg" alt="" srcset="" (click)="playAudio()">
+<div class="item_wrapper" (click)="playAudio()">  
+  
+  <div class="text_wrap">
+    <p>
+      {{ audioInfo.name }}
+    </p>
+    <p>
+      {{ audioInfo.voice }}
+    </p>
   </div>
-  <p>
-    {{ audioInfo.name }}
-  </p>
+
 </div>
 <!-- <audio [src]="audioInfo.url" [class]="audioInfo.name"></audio> -->
