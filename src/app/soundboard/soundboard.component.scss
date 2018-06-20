@@ -1,0 +1,24 @@
+.audios_wrap {
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 1500px;
+
+    @media screen and (min-width:600px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+   
+    @media screen and (min-width:800px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    @media screen and (min-width:1300px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    app-soundboard-item {
+        margin: 15px;
+    }
+    
+}
