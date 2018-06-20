@@ -1,0 +1,21 @@
+footer {
+    background-color: var(--darkback);
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        margin: 0;
+        color: #fff;
+        letter-spacing: .5px;
+
+        a {
+            color: #fff;
+            font-weight: normal;
+        }
+        span {
+            margin: 0 5px;
+        }
+    }
+}
