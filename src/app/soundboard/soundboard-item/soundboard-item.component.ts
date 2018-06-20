@@ -21,6 +21,5 @@ export class SoundboardItemComponent implements OnInit {
     this.audio.load();
     this.audio.play();
   }
-  
 
 }
