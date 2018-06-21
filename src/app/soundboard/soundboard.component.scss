@@ -1,9 +1,38 @@
-.audios_wrap {
-    width: 90%;
+.filter {
+    padding: 0 15px;
     margin: 40px auto;
+
+
+    form {
+        display: flex;
+        justify-content: space-between;
+
+        input, select {
+            height: 30px;
+        }
+
+        input[type=text] {
+            padding: 0 10px;
+            border: none;
+            margin-right: 16px;
+            
+        }
+        select {
+            border: 1px solid gray;
+        }
+        button {
+            background-color: rgb(240, 240, 240);
+            padding: 0;
+            border: none;
+        }
+    }
+}
+
+.audios_wrap {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    max-width: 1500px;
+    margin: 0 auto 40px;
+    
 
     @media screen and (min-width:600px) {
         grid-template-columns: repeat(2, 1fr);
@@ -18,7 +47,7 @@
     }
 
     app-soundboard-item {
-        margin: 15px;
+        padding: 15px;
     }
     
 }

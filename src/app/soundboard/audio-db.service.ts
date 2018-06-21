@@ -11,7 +11,7 @@ export class AudioDbService {
     new AudioElement(
       'Alerta Spoiler',
       '/assets/audios/alerta-spoiler.wav',
-      'spoiler',
+      'shot',
       'group',
       '01'
     ),
@@ -60,7 +60,7 @@ export class AudioDbService {
     new AudioElement(
       'Empotrarte',
       '/assets/audios/emprotarte.wav',
-      'Empotrarte',
+      'shot',
       'Jordi',
       '01'
     ),
@@ -172,7 +172,7 @@ export class AudioDbService {
     new AudioElement(
       'Le llamariamos Bukake',
       '/assets/audios/le_llamariamos_bukake.wav',
-      'bukake',
+      'shot',
       'Jordi',
       '01'
     ),
@@ -186,14 +186,14 @@ export class AudioDbService {
     new AudioElement(
       'Lo Recomiendo',
       '/assets/audios/lo_recomiendo.wav',
-      'Lo recomiendo',
+      'shot',
       'Fer',
       '01'
     ),
     new AudioElement(
       'Me corro en tu cara',
       '/assets/audios/me_corro_en_tu_cara.wav',
-      'Me corro en tu cara',
+      'shot',
       'Carlos',
       '01'
     ),
@@ -599,30 +599,53 @@ export class AudioDbService {
     new AudioElement(
       'Movimiento Sexy',
       '/assets/audios/movimento_sexy.wav',
-      'Movimiento Sexy',
+      'shot',
       'group',
       '01'
     ),
     new AudioElement(
       'Ya vas tarde',
       '/assets/audios/ya_tarde_caballero.wav',
-      'Ya vas tarde',
+      'shot',
       'group',
       '01'
     ),
     new AudioElement(
       'Ya Wey!',
       '/assets/audios/ya_wey.wav',
-      'Ya Wey!',
+      'shot',
       'group',
       '01'
     ),
   ];
 
-  constructor() { }
-
+  constructor() { 
+  }
+  
   getAudios(){
     return this.audios;
   }
+
+  categoriesRAW = [];
+  categories = [];
+  categoriesObj = [];
+
+  getCategories() {
+    this.audios.forEach(item => {
+        this.categoriesRAW.push(item.section);
+    });
+
+    this.categories = this.categoriesRAW.filter( function( item, index, inputArray ) {
+           return inputArray.indexOf(item) == index;
+    });
+
+    this.categories.forEach(item => {
+      this.categoriesObj.push({ name: item});
+    });
+
+    console.log(this.categoriesObj);
+    return this.categoriesObj;
+  }
+  
 
 }

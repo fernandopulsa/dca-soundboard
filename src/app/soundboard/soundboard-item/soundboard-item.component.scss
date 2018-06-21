@@ -16,6 +16,17 @@
     .text_wrap {
         padding: 5%;
         flex-basis: 100%;
+        .item {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+        .section, .voice {
+            opacity: .4;
+        }
     }
 }
 

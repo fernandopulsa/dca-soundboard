@@ -1,19 +1,26 @@
-<div class="item_wrapper" (click)="playAudio()">  
+<div class="item_wrapper" (click)="playAudio()">
+
   <div class="progressBar" [ngStyle]="{'width': progressWidth}"></div>
   <div class="text_wrap">
-    <p>
-      {{ audioInfo.name }}
-    </p>
-    <p>
-      {{ audioInfo.voice }}
-    </p>
-    <p>
-      {{ audioInfo.section }}
-    </p>
-    <p>
-      {{ audioInfo.take }}
-    </p>
+    <div class="item">
+      <p class="name">
+        {{ audioInfo.name }}
+      </p>
+      <p class="take">
+        {{ audioInfo.take }}
+      </p>
+    </div>
+    <div class="item">
+      <p class="section">
+        {{ audioInfo.section }}
+      </p>
+    </div>
+    <div class="item">
+      <p class="voice">
+        {{ audioInfo.voice }}
+      </p>
+    </div>
   </div>
 
 </div>
-<!-- <audio [src]="audioInfo.url" [class]="audioInfo.name"></audio> -->
+

@@ -8,3 +8,8 @@
     color: red !important;
 }
 
+main {
+    max-width: 1500px;
+    min-height: calc(100vh - 240px);
+    margin: 0 auto;
+}
