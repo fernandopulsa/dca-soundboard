@@ -15,7 +15,6 @@ export class SoundboardComponent implements OnInit {
 
   ngOnInit() {
     this.audios = this.audioDb.getAudios()
-    console.log(this.audios);
   }
   
 

@@ -1,5 +1,5 @@
 <div class="item_wrapper" (click)="playAudio()">  
-  
+  <div class="progressBar" [ngStyle]="{'width': progressWidth}"></div>
   <div class="text_wrap">
     <p>
       {{ audioInfo.name }}
