@@ -2,7 +2,7 @@
   <form>
     <div class="left">
       <input type="text" name="name" placeholder="Busca por el nombre" [(ngModel)]="name">
-      <select name="category" id="category" (change)="selectedCategory = $event.target.value">
+      <select name="category" id="category" (change)="onCategoryChange($event.target.value)">
           <option *ngFor="let categorie of categories">{{ categorie.name }}</option>
       </select>
     </div>
